@@ -15,7 +15,7 @@ fi
 
 OUTPUT_FILE="${INPUT_FILE%.*}".mp4
 
-TEMP_DIR=/tmp/webp2mp4/`date "+%Y%m%d%H%M%S"`
+TEMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TEMP_DIR"' EXIT
 
 FPS=`webpmux -info "$INPUT_FILE" | awk '/^ *[0-9]+:/ { n++; total += $7 } END { printf "%.3f", n * 1000 / total }'`
