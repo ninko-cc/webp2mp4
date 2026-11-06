@@ -7,7 +7,7 @@ Convert an animated WebP file to MP4.
 ## Usage
 
 ```
-$ webp2mp4 [FILE]
+$ webp2mp4 FILE
 ```
 
 The output is written next to the input file with the extension replaced by `.mp4` (e.g. `foo.webp` → `foo.mp4`).
